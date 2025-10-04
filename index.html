@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- AMP Auto Ads -->
+  <script async custom-element="amp-auto-ads"
+    src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+
+  <!-- Metadados -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bem-vindo ao Plano Automático, a plataforma inovadora para criação e gerenciamento de planos de aula digitais e eletrônicos. Desenvolvido especialmente para professores de Moçambique, nosso aplicativo permite que você planeje e organize suas aulas de forma rápida, prática e 100% digital diretamente no seu celular Android. Diga adeus ao trabalho manual e aproveite as vantagens da tecnologia para otimizar o tempo e aumentar a eficiência do seu planejamento. Criado por Luis Paulino Levene Maquina, professor da Escola Básica de Dunda, o Plano Automático visa facilitar a rotina dos educadores e tornar o planejamento de aulas mais acessível e ágil. Experimente a transformação digital no ensino e revolucione a maneira como você planeja suas aulas!">
+  <meta name="google-site-verification" content="t08SgkfwnibBLow_kYa9gJDrfbgnoI51qSkr4ChGt-I" />
+  <title>Plano Automático</title>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      background-color: #fff;
+    }
+
+    #iframeContainer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- AMP Ads -->
+  <amp-auto-ads type="adsense"
+    data-ad-client="ca-pub-5337833676228617"></amp-auto-ads>
+
+  <!-- Container do iframe que esconde a URL -->
+  <div id="iframeContainer">
+    <iframe src="https://luispaulinolevene.github.io/planosss" id="iframe"></iframe>
+  </div>
+</body>
+</html>
