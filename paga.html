@@ -40,6 +40,13 @@
         .form-group {
             margin-bottom: 20px;
         }
+        a {
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+            display: block;
+            margin-bottom: 10px;
+        }
         .logout {
             margin-top: 30px;
         }
@@ -124,13 +131,19 @@
 
         <form id="payment-form">
             <div class="form-group">
-                Plano mensal: 50,00MT para 30 dias
+                <a href="pagamento1.html">
+                    Plano mensal: 50,00MT para 30 dias
+                </a>
             </div>
             <div class="form-group">
-                Plano anual: 500,00MT para 365 dias
+                <a href="pagamento2.html">
+                    Plano anual: 500,00MT para 365 dias
+                </a>
             </div>
             <div class="form-group">
-                Plano Infinito: 2000,00MT para vitalício
+                <a href="pagamento4.html">
+                    Plano Infinito: 2000,00MT para vitalício
+                </a>
             </div>
             <div class="logout">
                 <a href="logout.html">Terminar sessão</a>
@@ -210,15 +223,16 @@
 
                     if (formattedExpirationDate > currentDate) {
                         window.location.href = "./homel.html";
-                    } else {
-                        window.location.href = "./emetodo.html";
+                        return;
                     }
                 }
+
+                document.getElementById("payment-container").style.display = "block";
             } else {
                 console.error("Usuário não encontrado no Firestore.");
                 // Caso não encontre os dados do usuário, pode só mostrar o email do auth
                 document.getElementById('user-info').innerHTML = `Olá, <strong>Usuário</strong><br />Email: ${user.email}`;
-                window.location.href = "./pagamento1.html";
+                document.getElementById("payment-container").style.display = "block";
             }
         }
 
